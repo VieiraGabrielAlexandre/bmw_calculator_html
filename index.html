@@ -37,4 +37,24 @@
       </div>
     </div>
   </div>
+  <script>
+
+  function calcularTempo() {
+    const voucherCheckbox = document.getElementById('voucher');
+    const aplicarVoucher = voucherCheckbox.checked;
+    const data1 = new Date(`${document.getElementById('data1').value}T${document.getElementById('hora1').value}:00`);
+    const data2 = new Date(`${document.getElementById('data2').value}T${document.getElementById('hora2').value}:00`);
+    const diferenca = Math.abs(data2 - data1);
+    const minutos = Math.floor(diferenca / 1000 / 60);
+    const precoPorMinuto = 0.20;
+    let resultado = minutos * precoPorMinuto;
+    if (aplicarVoucher) {
+      const desconto = resultado * 0.3;
+      resultado -= desconto;
+    }
+    const resultadoFormatado = resultado.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+    document.getElementById('resultado').innerText = `O resultado é ${resultadoFormatado}.`;
+  }
+  
+  </script>
 </body>  
