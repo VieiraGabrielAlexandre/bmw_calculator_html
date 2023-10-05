@@ -13,9 +13,9 @@
       <div class="col-md-6" style="padding-bottom: 110%";>
         <div class="card">
           <div class="card-body">
-            <h1 class="card-title">Calculadora Eu de BMW</h1>
+            <h1 class="card-title">Calculadora</h1>
             <form id="form">
-              <div class="mb-3">
+              <div class="mb-3" style="text-align: right;">
                 <label for="data1" class="form-label">Início:</label>
                 <input type="date" id="data1" name="data1" class="form-control">
                 <input type="time" id="hora1" name="hora1" class="form-control">
@@ -29,7 +29,9 @@
                 <input type="checkbox" id="voucher" name="voucher" class="form-check-input">
                 <label for="voucher" class="form-check-label">Voucher Aniversário</label>
               </div>
-              <button type="button" onclick="calcularTempo()" class="btn btn-primary">Calcular</button>
+              <button type="button" onclick="calcularTempo()" class="btn btn-primary">
+                <span>Calcular</span>
+              </button>
             </form>
             <p id="resultado" class="mt-3"></p>
           </div>

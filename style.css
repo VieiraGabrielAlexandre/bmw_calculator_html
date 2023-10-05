@@ -41,3 +41,27 @@ body {
   background-color: #007bff;
   border: none;
 }
+
+/* Add this CSS to align input data */
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-label {
+  flex: 1;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.form-control {
+  flex: 2;
+}
+
+.hidden-text {
+  font-size: 0;
+  color: transparent;
+  text-indent: -9999px;
+  overflow: hidden;
+}
